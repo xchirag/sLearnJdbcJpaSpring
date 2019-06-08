@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="roobie" class="foo.Robot" init-method ="robot_init" scope="prototype"> <!--  default setup for scope is singleton which give single bean all the time -->
+		<property name ="name" value="Bender" />
+		<!--  <constructor-arg ref="theweapon"  /> -->
+		<constructor-arg value="1" type="int"/>
+		<!--  <constructor-arg  value="5.6f"/>
+		<property name="weapon" ref="theweapon" />-->
+	</bean>
+	
+	<bean id="theweapon" class="foo.Weapon"></bean>
+</beans>
