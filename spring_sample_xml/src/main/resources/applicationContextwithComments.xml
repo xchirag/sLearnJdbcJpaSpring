@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="customerRepository"
+		class="com.fdmgroup.repository.HibernateCustomerRepositoryImpl" />
+
+	<!-- following is wiring by setter injection which I prefer the most
+	<bean name="customerService" class="com.fdmgroup.service.CustomerServiceImpl"> 
+		<property name="customerRepository" ref="customerRepository" /> </bean> -->
+
+	<!-- same result but via constructor injecton as under remember this will 
+		require creating constructors into the serviceImpl class and then wiring 
+		them together we may end up creating two consturctors one without any arguments 
+		and one with arguement the name must be the name of interface you are using 
+		to define it! -->
+
+	<!-- wiring by constructor can be done as under -->
+	<!-- <bean name="customerService" class="com.fdmgroup.service.CustomerServiceImpl"> 
+		<constructor-arg index="0" ref="customerRepository" /> </bean> -->
+
+	<!-- autowire by constructor -->
+	<!-- <bean name="customerService" class="com.fdmgroup.service.CustomerServiceImpl" 
+		autowire="constructor"/> -->
+
+	<!-- autowire by type -->
+	<bean name="customerService" class="com.fdmgroup.service.CustomerServiceImpl"
+		autowire="byType" />
+
+</beans>
+<!-- <bean name="anyName" class="com.fdmgroup.repository.HibernateCustomerRepositoryImpl"/> 
+	<bean name="anyName2" class="com.fdmgroup.service.CustomerServiceImpl"> <property 
+	name="customerRepository" ref="anyName"/> </bean> -->
+
+
+<!-- <bean name="anyName" class="com.fdmgroup.model.Customer" autowire="byName"/> 
+	<bean name="custServ" class="com.fdmgroup.repository.HibernateCustomerRepositoryImpl"/> 
+	<bean name="custServ2" class="com.fdmgroup.service.CustomerServiceImpl"> 
+	<property name="custServthis must be used in service impl class!" ref="custServ" 
+	/> </bean> -->
+		  
+	
+	
+
+
+
