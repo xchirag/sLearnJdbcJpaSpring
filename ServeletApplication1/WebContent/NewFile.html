@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Trial Page</title>
+
+<link rel="stylesheet" href="cssfile.css"></link>
+
+</head>
+<body>
+	<div class="container">
+		<form name="formName" method="POST"
+			action="/ServeletApplication/Register">
+
+			<div>
+				Username: <input type="text" id="userName" name="userName"
+					placeholder="input your Name here" /> Password: <input
+					type="password" id="password" name="password" />
+			</div>
+
+			<div>
+				Sex: <input type="radio" name="gender" value="Male"> Male <input
+					type="radio" name="gender" value="female"> Female
+			</div>
+
+			<div>
+				Hobbies: <input type="checkbox" name="hobbies" value="Music" />Music
+				<input type="checkbox" name="hobbies" value="Movies" />Movies <input
+					type="checkbox" name="hobbies" value="Masti" />Masti
+			</div>
+
+			<div>
+				Country: <select name="Country">
+					<option value="Australia">Australia</option>
+					<option value="China">China</option>
+					<option value="India">India</option>
+					<option value="UK">UK</option>
+					<option value="USA">USA</option>
+				</select>
+
+			</div>
+
+			<div>
+
+				<select name="languages" multiple="multiple">
+					<option value="Chinese">Chinese</option>
+					<option value="Hindi">Hindi</option>
+					<option value="English">English</option>
+					<option value="UKEnglish">UK English</option>
+					<option value="French">French</option>
+				</select>
+
+			</div>
+
+			<div>
+				<button type="submit" value="Register" name="btnRegister">
+					Register</button>
+				<button type="reset" value="Clear" name="btnClear">Clear</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

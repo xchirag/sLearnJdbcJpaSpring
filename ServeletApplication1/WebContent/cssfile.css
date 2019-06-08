@@ -1,0 +1,40 @@
+
+
+#userName{
+	background-color: lightgreen;
+}
+
+div{
+	margin-bottom: 2%;
+	border-width: 1px;
+	border-style: groove;
+	border-color: #ff80c0;
+	padding: 5px;
+}
+
+/* make container*/
+body, html{
+	background-color: lightgray;
+	padding: 0;
+	margin: 0;
+}
+
+.container{
+	width: 989px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 5px;
+	
+}
+
+button{
+	
+	background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}

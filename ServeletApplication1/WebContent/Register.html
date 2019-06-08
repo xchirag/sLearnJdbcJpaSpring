@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Form</title>
+</head>
+<body>
+	<h1>Registration Form</h1>
+	<hr>
+
+	<form name="f1" method="GET" action="/ServeletApplication/Register">
+
+		<table>
+			<tbody>
+				<tr>
+					<td>User Name :</td>
+					<td><input type="text" name="userName" /> </td>
+				</tr>
+
+				<tr>
+					<td>Password :</td>
+					<td><input type="password" name="password" /> </td>
+				</tr>
+
+				<tr></tr>
+				<tr>
+					<td>Sex :</td>
+					<td><input type="radio" name="gender" value="Male"> Male &nbsp;</td>
+					<td><input type="radio" name="gender" value="Female"> Female </td>
+				</tr>
+
+
+				<tr>
+					<td>Hobbies</td>
+					<td><input type="checkbox" name="hobbies" value="Music" />
+						Music
+					<td><input type="checkbox" name="hobbies" value="Sport" />
+						Sport
+					<td><input type="checkbox" name="hobbies" value="Movies" />
+						Movies
+				</tr>
+
+				<tr>
+
+					<td>Country :</td>
+					<td><select name="country">
+							<option value="Australia">Australia</option>
+							<option value="China">China</option>
+							<option value="India">India</option>
+							<option value="UK">UK</option>
+							<option value="USA">USA</option>
+					</select></td>
+				</tr>
+				
+				<tr>
+
+					<td>Languages Known</td>
+					<td><select name="languages" multiple="multiple">
+							<option value="Chinese">Chinese</option>
+							<option value="Hindi">Hindi</option>
+							<option value="English">English</option>
+							<option value="UKEnglish">UK English</option>
+							<option value="French">French</option>
+					</select></td>
+				</tr>
+				
+				<tr>
+				<td>&nbsp;</td>
+								<td><input type="submit" value="Register" name="btnRegister" />&nbsp;
+				<td><input type="reset" value="Clear" name="btnClear" /> &nbsp;
+				
+				</tr>
+			</tbody>
+
+
+
+		</table>
+	</form>
+
+
+</body>
+</html>
